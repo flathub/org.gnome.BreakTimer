@@ -74,7 +74,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gnome-break-timer.git",
-                    "tag": "2.1.0"
+                    "commit": "0ab668375c222a2483930111df1da8abd094e494"
                 }
             ]
         }
