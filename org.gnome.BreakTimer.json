@@ -1,7 +1,7 @@
 {
     "id" : "org.gnome.BreakTimer",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "gnome-break-timer-settings",
     "finish-args" : [
@@ -13,7 +13,6 @@
         "--talk-name=org.gnome.Shell",
         "--talk-name=org.gnome.Mutter.IdleMonitor",
         "--talk-name=org.gnome.ScreenSaver",
-        "--talk-name=org.freedesktop.Notifications",
         "--device=dri"
     ],
     "modules" : [
@@ -67,6 +66,22 @@
             ]
         },
         {
+            "name" : "blueprint-compiler",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                    "tag" : "v0.10.0",
+                    "commit" : "2a39a16391122af2f3d812e478c1c1398c98b972",
+                    "x-checker-data" : {
+                        "type" : "git",
+                        "tag-pattern": "^v([\d.]+)$"
+                    }
+                }
+            ]
+        },
+        {
             "name" : "gnome-break-timer",
             "buildsystem" : "meson",
             "builddir" : true,
@@ -74,7 +89,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gnome-break-timer.git",
-                    "commit": "fe967bbf7d9e8955c1d915c7df898d990e0cbaa8"
+                    "tag": "3.1.0"
                 }
             ]
         }
